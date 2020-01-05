@@ -5,7 +5,7 @@ import random
 ACTUAL = getcwd()
 BASE_DIR = join(ACTUAL, 'images')
 
-files = [f for f in listdir(BASE_DIR) if isfile(join(BASE_DIR, f)) if f.endswith('.jpg')]
+files = sorted([f for f in listdir(BASE_DIR) if isfile(join(BASE_DIR, f)) if f.endswith('.jpg')])
 grupos = [files[i:i+3] for i in range(0, len(files), 3)]
 html = ''
 
